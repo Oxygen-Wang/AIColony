@@ -37,6 +37,7 @@ crash_dump*/
 .ai/
 .claude/
 .codex/
+.cursor/
 _scratch/
 order_tmp.txt
 cli/
