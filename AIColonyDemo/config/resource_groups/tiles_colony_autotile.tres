@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ResourceGroup" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/godot_resource_groups/resource_group.gd" id="1_colony_auto"]
+
+[resource]
+script = ExtResource("1_colony_auto")
+base_folder = "res://image/tiles/colony/autotile"
+includes = Array[String](["*.png"])
+excludes = Array[String]([])
+paths = Array[String]([])

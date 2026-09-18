@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ResourceGroup" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/godot_resource_groups/resource_group.gd" id="1_audio_amb"]
+
+[resource]
+script = ExtResource("1_audio_amb")
+base_folder = "res://audio/ambience"
+includes = Array[String](["*.ogg", "*.wav", "*.mp3"])
+excludes = Array[String]([])
+paths = Array[String]([])

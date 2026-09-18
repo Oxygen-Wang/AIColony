@@ -5,10 +5,27 @@ extends RefCounted
 ## Rebuild groups in Godot with Project > Tools > Rebuild project resource groups.
 
 const ALL_AUDIO: ResourceGroup = preload("res://config/resource_groups/all_audio.tres")
-const ALL_IMAGES: ResourceGroup = preload("res://config/resource_groups/all_images.tres")
+const AUDIO_AMBIENCE: ResourceGroup = preload("res://config/resource_groups/audio_ambience.tres")
+const AUDIO_BGM: ResourceGroup = preload("res://config/resource_groups/audio_bgm.tres")
+const AUDIO_JINGLES: ResourceGroup = preload("res://config/resource_groups/audio_jingles.tres")
+const AUDIO_SFX: ResourceGroup = preload("res://config/resource_groups/audio_sfx.tres")
+const CHARACTERS_BASE: ResourceGroup = preload("res://config/resource_groups/characters_base.tres")
+const CHARACTERS_REFERENCE: ResourceGroup = preload("res://config/resource_groups/characters_reference.tres")
 const COLONIST_SHEETS: ResourceGroup = preload("res://config/resource_groups/colonist_sheets.tres")
+const CREATURE_SHEETS: ResourceGroup = preload("res://config/resource_groups/creature_sheets.tres")
 const MONSTER_SHEETS: ResourceGroup = preload("res://config/resource_groups/monster_sheets.tres")
 const TILE_ATLASES: ResourceGroup = preload("res://config/resource_groups/tile_atlases.tres")
+const TILES_AUTOTILES: ResourceGroup = preload("res://config/resource_groups/tiles_autotiles.tres")
+const TILES_COLONY_AUTOTILE: ResourceGroup = preload("res://config/resource_groups/tiles_colony_autotile.tres")
+const TILES_COLONY_DIRECTIONAL: ResourceGroup = preload("res://config/resource_groups/tiles_colony_directional.tres")
+const TILES_COLONY_OBJECTS: ResourceGroup = preload("res://config/resource_groups/tiles_colony_objects.tres")
+const TILES_COLONY_TOWERS: ResourceGroup = preload("res://config/resource_groups/tiles_colony_towers.tres")
+const TILES_GENERATED_DRAFTS: ResourceGroup = preload("res://config/resource_groups/tiles_generated_drafts.tres")
+const TILES_LEGACY: ResourceGroup = preload("res://config/resource_groups/tiles_legacy.tres")
+const TILES_RPGMAKER: ResourceGroup = preload("res://config/resource_groups/tiles_rpgmaker.tres")
+const TILES_TERRAIN: ResourceGroup = preload("res://config/resource_groups/tiles_terrain.tres")
+const UI_FACES: ResourceGroup = preload("res://config/resource_groups/ui_faces.tres")
+const UI_SYSTEM: ResourceGroup = preload("res://config/resource_groups/ui_system.tres")
 
 
 static func paths(group: ResourceGroup) -> Array[String]:
