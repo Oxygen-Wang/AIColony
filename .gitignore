@@ -39,9 +39,16 @@ crash_dump*/
 .codex/
 _scratch/
 order_tmp.txt
+cli/
+godot-agent-main/
+godot-cli-main/
 
 # Local notes
 .obsidian/
+
+# Local planning/source material kept off GitHub
+@素材/
+策划/
 
 # Editor and OS noise
 .vscode/
