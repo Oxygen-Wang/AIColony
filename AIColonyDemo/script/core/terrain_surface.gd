@@ -2,7 +2,7 @@ class_name TerrainSurface
 extends Sprite2D
 ## 连续地表材质独立于格子逻辑；只在生成地图时更新生境权重。
 
-const ATLAS: Texture2D = preload("res://image/tiles/terrain/terrain_atlas_v1.png")
+var atlas: Texture2D = GameResourceGroups.texture_from_known_group("res://image/tiles/terrain/terrain_atlas_v1.png")
 const TERRAIN_SHADER: Shader = preload("res://shader/terrain.gdshader")
 
 func rebuild(tiles: PackedInt32Array, width: int, height: int, tile_size: int) -> void:
@@ -20,7 +20,7 @@ func rebuild(tiles: PackedInt32Array, width: int, height: int, tile_size: int) -
 	z_index = -10
 	var surface_material := ShaderMaterial.new()
 	surface_material.shader = TERRAIN_SHADER
-	surface_material.set_shader_parameter("terrain_atlas", ATLAS)
+	surface_material.set_shader_parameter("terrain_atlas", atlas)
 	surface_material.set_shader_parameter("biome_map", texture)
 	surface_material.set_shader_parameter("world_size", float(width * tile_size))
 	material = surface_material

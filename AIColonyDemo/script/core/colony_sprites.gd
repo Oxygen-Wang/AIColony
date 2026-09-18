@@ -28,12 +28,12 @@ const TILES_DIR := "res://image/tiles/legacy/"
 ## 新生成的大图集先作为完整源素材入库。后续逐项验收切图时，从这里取对应时代图集，
 ## 不直接覆盖已经在运行的建筑图集，避免尚未校准的格子影响现有存档。
 const EXPANDED_ASSET_DRAFTS := {
-	"resources_wood_stone": preload("res://image/tiles/generated/expanded_asset_drafts/01_resources_wood_stone_tools.png"),
-	"iron_age": preload("res://image/tiles/generated/expanded_asset_drafts/02_iron_age_workshop.png"),
-	"furniture_survival": preload("res://image/tiles/generated/expanded_asset_drafts/03_furniture_survival_buildings.png"),
-	"steam_electric": preload("res://image/tiles/generated/expanded_asset_drafts/04_steam_electric_tech.png"),
-	"electric_nuclear": preload("res://image/tiles/generated/expanded_asset_drafts/05_electric_nuclear_endgame.png"),
-	"actions_status_ui": preload("res://image/tiles/generated/expanded_asset_drafts/06_actions_status_ui.png"),
+	"resources_wood_stone": "res://image/tiles/generated/expanded_asset_drafts/01_resources_wood_stone_tools.png",
+	"iron_age": "res://image/tiles/generated/expanded_asset_drafts/02_iron_age_workshop.png",
+	"furniture_survival": "res://image/tiles/generated/expanded_asset_drafts/03_furniture_survival_buildings.png",
+	"steam_electric": "res://image/tiles/generated/expanded_asset_drafts/04_steam_electric_tech.png",
+	"electric_nuclear": "res://image/tiles/generated/expanded_asset_drafts/05_electric_nuclear_endgame.png",
+	"actions_status_ui": "res://image/tiles/generated/expanded_asset_drafts/06_actions_status_ui.png",
 }
 
 ## 6 个固定主角 → 行走图 / 角色块 / 性格

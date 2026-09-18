@@ -4,7 +4,6 @@ extends Node2D
 
 enum Move { ARRIVED, MOVING, BLOCKED }
 
-const PEOPLE_SHEET: Texture2D = preload("res://image/characters/characters/People1.png")
 const SPRITE_SIZE := Vector2(32, 32)
 
 var game: Node            # main.gd
@@ -37,7 +36,7 @@ var work_mult := 1.0
 var hunger_rate := 1.0
 var mood_bias := 0.0
 var sprite_slot := 0
-var people_sheet: Texture2D = PEOPLE_SHEET
+var people_sheet: Texture2D = GameResourceGroups.texture_from_known_group("res://image/characters/characters/People1.png")
 var generated_sheet := false
 var facing_dir := ColonySprites.DIR_DOWN
 var anim_time := 0.0

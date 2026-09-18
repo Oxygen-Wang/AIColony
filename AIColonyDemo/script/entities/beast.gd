@@ -2,7 +2,7 @@ class_name Beast
 extends Node2D
 ## 野兽：夜里从地图边缘刷新，扑向最近的小人；被墙挡住就拆墙
 
-const MONSTER_SHEET: Texture2D = preload("res://image/characters/creatures/Monster1.png")
+var monster_sheet: Texture2D = GameResourceGroups.texture_from_known_group("res://image/characters/creatures/Monster1.png")
 const GENERATED_ENEMY_SHEETS := [
 	preload("res://image/characters/monsters/generated/enemy_directional_01_basic_16x4.png"),
 	preload("res://image/characters/monsters/generated/enemy_directional_02_mid_16x4.png"),
@@ -242,7 +242,7 @@ func _draw() -> void:
 	else:
 		var frame := 1 if int(_wobble * 2.0) % 2 == 0 else 0
 		var region := Rect2(Vector2(frame * 32, 0), SPRITE_SIZE)
-		draw_texture_rect_region(MONSTER_SHEET, Rect2(-16, -17 + bob, 32, 32), region)
+		draw_texture_rect_region(monster_sheet, Rect2(-16, -17 + bob, 32, 32), region)
 	draw_arc(Vector2(0, bob - 1), 13.0 * sprite_scale, 0, TAU, 20, Color("7e2020"), 1.5)
 	# 血条
 	if hp < max_hp:

@@ -2,40 +2,40 @@ class_name GameWorld
 extends Node2D
 ## 世界地图：算法生成物块、绘制、寻路、物块增删改
 
-const INSIDE_PROPS: Texture2D = preload("res://image/tiles/rpgmaker/Inside_B.png")
-const COLONY_ASSETS: Texture2D = preload("res://image/tiles/colony/colony_assets_v1.png")
-const COLONY_OBJECTS_LATEST: Texture2D = preload("res://image/tiles/colony/colony_objects_latest.png")
-const WALL_STONE_DIRECTIONS: Texture2D = preload("res://image/tiles/colony/directional/wall_stone_4dir.png")
-const WALL_UPGRADED_DIRECTIONS: Texture2D = preload("res://image/tiles/colony/directional/wall_upgraded_4dir.png")
-const WALL_STONE_AUTOTILE: Texture2D = preload("res://image/tiles/colony/autotile/wall_stone_autotile_4x4.png")
-const WALL_UPGRADED_AUTOTILE: Texture2D = preload("res://image/tiles/colony/autotile/wall_upgraded_autotile_4x4.png")
-const DIRECTIONAL_ASSETS := {
-	"door": preload("res://image/tiles/colony/directional/door_wood_4dir.png"),
-	"stone_door": preload("res://image/tiles/colony/directional/door_stone_4dir.png"),
-	"iron_door": preload("res://image/tiles/colony/directional/door_iron_4dir.png"),
-	"elec_door": preload("res://image/tiles/colony/directional/door_electric_4dir.png"),
-	"rad_door": preload("res://image/tiles/colony/directional/door_radiation_4dir.png"),
+static var INSIDE_PROPS: Texture2D = GameResourceGroups.texture_from_known_group("res://image/tiles/rpgmaker/Inside_B.png")
+static var COLONY_ASSETS: Texture2D = GameResourceGroups.texture_from_known_group("res://image/tiles/colony/colony_assets_v1.png")
+static var COLONY_OBJECTS_LATEST: Texture2D = GameResourceGroups.texture_from_known_group("res://image/tiles/colony/colony_objects_latest.png")
+static var WALL_STONE_DIRECTIONS: Texture2D = GameResourceGroups.texture_from_known_group("res://image/tiles/colony/directional/wall_stone_4dir.png")
+static var WALL_UPGRADED_DIRECTIONS: Texture2D = GameResourceGroups.texture_from_known_group("res://image/tiles/colony/directional/wall_upgraded_4dir.png")
+static var WALL_STONE_AUTOTILE: Texture2D = GameResourceGroups.texture_from_known_group("res://image/tiles/colony/autotile/wall_stone_autotile_4x4.png")
+static var WALL_UPGRADED_AUTOTILE: Texture2D = GameResourceGroups.texture_from_known_group("res://image/tiles/colony/autotile/wall_upgraded_autotile_4x4.png")
+static var DIRECTIONAL_ASSETS := {
+	"door": GameResourceGroups.texture_from_known_group("res://image/tiles/colony/directional/door_wood_4dir.png"),
+	"stone_door": GameResourceGroups.texture_from_known_group("res://image/tiles/colony/directional/door_stone_4dir.png"),
+	"iron_door": GameResourceGroups.texture_from_known_group("res://image/tiles/colony/directional/door_iron_4dir.png"),
+	"elec_door": GameResourceGroups.texture_from_known_group("res://image/tiles/colony/directional/door_electric_4dir.png"),
+	"rad_door": GameResourceGroups.texture_from_known_group("res://image/tiles/colony/directional/door_radiation_4dir.png"),
 }
-const DOOR_AUTOTILE_ASSETS := {
-	"door": preload("res://image/tiles/colony/autotile/door_wood_wall_segment_4x4.png"),
-	"stone_door": preload("res://image/tiles/colony/autotile/door_stone_wall_segment_4x4.png"),
-	"iron_door": preload("res://image/tiles/colony/autotile/door_iron_wall_segment_4x4.png"),
-	"elec_door": preload("res://image/tiles/colony/autotile/door_electric_wall_segment_4x4.png"),
-	"rad_door": preload("res://image/tiles/colony/autotile/door_radiation_wall_segment_4x4.png"),
+static var DOOR_AUTOTILE_ASSETS := {
+	"door": GameResourceGroups.texture_from_known_group("res://image/tiles/colony/autotile/door_wood_wall_segment_4x4.png"),
+	"stone_door": GameResourceGroups.texture_from_known_group("res://image/tiles/colony/autotile/door_stone_wall_segment_4x4.png"),
+	"iron_door": GameResourceGroups.texture_from_known_group("res://image/tiles/colony/autotile/door_iron_wall_segment_4x4.png"),
+	"elec_door": GameResourceGroups.texture_from_known_group("res://image/tiles/colony/autotile/door_electric_wall_segment_4x4.png"),
+	"rad_door": GameResourceGroups.texture_from_known_group("res://image/tiles/colony/autotile/door_radiation_wall_segment_4x4.png"),
 }
-const TOWER_ASSETS := {
-	"wood_tower": preload("res://image/tiles/colony/towers/tower_wood_arrow.png"),
-	"stone_tower": preload("res://image/tiles/colony/towers/tower_stone_ballista.png"),
-	"turret": preload("res://image/tiles/colony/towers/tower_iron_cannon.png"),
-	"laser_turret": preload("res://image/tiles/colony/towers/tower_electric_laser.png"),
-	"nuke_tower": preload("res://image/tiles/colony/towers/tower_nuclear_plasma.png"),
+static var TOWER_ASSETS := {
+	"wood_tower": GameResourceGroups.texture_from_known_group("res://image/tiles/colony/towers/tower_wood_arrow.png"),
+	"stone_tower": GameResourceGroups.texture_from_known_group("res://image/tiles/colony/towers/tower_stone_ballista.png"),
+	"turret": GameResourceGroups.texture_from_known_group("res://image/tiles/colony/towers/tower_iron_cannon.png"),
+	"laser_turret": GameResourceGroups.texture_from_known_group("res://image/tiles/colony/towers/tower_electric_laser.png"),
+	"nuke_tower": GameResourceGroups.texture_from_known_group("res://image/tiles/colony/towers/tower_nuclear_plasma.png"),
 }
-const TOWER_DIRECTIONAL_ASSETS := {
-	"wood_tower": preload("res://image/tiles/colony/towers/tower_wood_arrow_8dir.png"),
-	"stone_tower": preload("res://image/tiles/colony/towers/tower_stone_ballista_8dir.png"),
-	"turret": preload("res://image/tiles/colony/towers/tower_iron_cannon_8dir.png"),
-	"laser_turret": preload("res://image/tiles/colony/towers/tower_electric_laser_8dir.png"),
-	"nuke_tower": preload("res://image/tiles/colony/towers/tower_nuclear_plasma_8dir.png"),
+static var TOWER_DIRECTIONAL_ASSETS := {
+	"wood_tower": GameResourceGroups.texture_from_known_group("res://image/tiles/colony/towers/tower_wood_arrow_8dir.png"),
+	"stone_tower": GameResourceGroups.texture_from_known_group("res://image/tiles/colony/towers/tower_stone_ballista_8dir.png"),
+	"turret": GameResourceGroups.texture_from_known_group("res://image/tiles/colony/towers/tower_iron_cannon_8dir.png"),
+	"laser_turret": GameResourceGroups.texture_from_known_group("res://image/tiles/colony/towers/tower_electric_laser_8dir.png"),
+	"nuke_tower": GameResourceGroups.texture_from_known_group("res://image/tiles/colony/towers/tower_nuclear_plasma_8dir.png"),
 }
 const OBJECT_ATLAS_ORDER := {
 	"battery": 0, "radar": 1, "floor": 2, "crop_0": 3, "crop_1": 4, "crop_2": 5, "wall_upgraded": 6, "floor_upgraded": 7,
