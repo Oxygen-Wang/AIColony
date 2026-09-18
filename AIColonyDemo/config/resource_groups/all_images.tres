@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ResourceGroup" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/godot_resource_groups/resource_group.gd" id="1_images"]
+
+[resource]
+script = ExtResource("1_images")
+base_folder = "res://image"
+includes = Array[String](["**/*.png", "**/*.jpg", "**/*.jpeg", "**/*.webp"])
+excludes = Array[String]([])
+paths = Array[String]([])
