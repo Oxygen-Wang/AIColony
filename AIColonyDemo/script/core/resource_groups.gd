@@ -56,3 +56,14 @@ static func texture_by_name(group: ResourceGroup, file_stem: String) -> Texture2
 	if path == "":
 		return null
 	return load(path) as Texture2D
+
+
+static func texture_by_source_path(group: ResourceGroup, source_path: String) -> Texture2D:
+	var file_name := source_path.get_file()
+	var file_stem := file_name.get_basename()
+	var texture := texture_by_name(group, file_stem)
+	if texture != null:
+		return texture
+	if ResourceLoader.exists(source_path):
+		return load(source_path) as Texture2D
+	return null

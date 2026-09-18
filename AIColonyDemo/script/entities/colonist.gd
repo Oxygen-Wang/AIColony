@@ -69,8 +69,8 @@ func setup(g: Node, w: GameWorld, data: Dictionary) -> void:
 	generated_sheet = bool(data.get("generated_sheet", false))
 	var sheet_path := str(data.get("sheet", ""))
 	if sheet_path != "":
-		var loaded := load(sheet_path)
-		if loaded is Texture2D:
+		var loaded := load_people_sheet(sheet_path)
+		if loaded != null:
 			people_sheet = loaded
 	skills = (data.get("skills", skills) as Dictionary).duplicate()
 	hidden_traits = (data.get("traits", []) as Array).duplicate()
@@ -79,6 +79,12 @@ func setup(g: Node, w: GameWorld, data: Dictionary) -> void:
 	_font = Ui.font
 	add_to_group("colonists")
 	pass
+
+
+func load_people_sheet(sheet_path: String) -> Texture2D:
+	if generated_sheet:
+		return GameResourceGroups.texture_by_source_path(GameResourceGroups.COLONIST_SHEETS, sheet_path)
+	return GameResourceGroups.texture_by_source_path(GameResourceGroups.CHARACTERS_BASE, sheet_path)
 
 
 func _process(delta: float) -> void:
