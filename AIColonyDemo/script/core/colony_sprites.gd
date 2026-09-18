@@ -81,9 +81,7 @@ static var _cache := {}
 static func texture(path: String) -> Texture2D:
 	if _cache.has(path):
 		return _cache[path]
-	var t: Texture2D = null
-	if ResourceLoader.exists(path):
-		t = load(path) as Texture2D
+	var t := GameResourceGroups.texture_from_known_group(path)
 	_cache[path] = t
 	return t
 

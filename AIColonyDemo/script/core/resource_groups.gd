@@ -67,3 +67,48 @@ static func texture_by_source_path(group: ResourceGroup, source_path: String) ->
 	if ResourceLoader.exists(source_path):
 		return load(source_path) as Texture2D
 	return null
+
+
+static func texture_from_known_group(source_path: String) -> Texture2D:
+	var group := group_for_path(source_path)
+	if group == null:
+		if ResourceLoader.exists(source_path):
+			return load(source_path) as Texture2D
+		return null
+	return texture_by_source_path(group, source_path)
+
+
+static func group_for_path(source_path: String) -> ResourceGroup:
+	if source_path.begins_with("res://image/characters/characters/"):
+		return CHARACTERS_BASE
+	if source_path.begins_with("res://image/characters/reference/"):
+		return CHARACTERS_REFERENCE
+	if source_path.begins_with("res://image/characters/colonists/"):
+		return COLONIST_SHEETS
+	if source_path.begins_with("res://image/characters/creatures/"):
+		return CREATURE_SHEETS
+	if source_path.begins_with("res://image/characters/monsters/"):
+		return MONSTER_SHEETS
+	if source_path.begins_with("res://image/tiles/legacy/"):
+		return TILES_LEGACY
+	if source_path.begins_with("res://image/tiles/rpgmaker/"):
+		return TILES_RPGMAKER
+	if source_path.begins_with("res://image/tiles/terrain/"):
+		return TILES_TERRAIN
+	if source_path.begins_with("res://image/tiles/autotiles/"):
+		return TILES_AUTOTILES
+	if source_path.begins_with("res://image/tiles/colony/autotile/"):
+		return TILES_COLONY_AUTOTILE
+	if source_path.begins_with("res://image/tiles/colony/directional/"):
+		return TILES_COLONY_DIRECTIONAL
+	if source_path.begins_with("res://image/tiles/colony/towers/"):
+		return TILES_COLONY_TOWERS
+	if source_path.begins_with("res://image/tiles/colony/"):
+		return TILES_COLONY_OBJECTS
+	if source_path.begins_with("res://image/tiles/generated/expanded_asset_drafts/"):
+		return TILES_GENERATED_DRAFTS
+	if source_path.begins_with("res://image/ui/faces/"):
+		return UI_FACES
+	if source_path.begins_with("res://image/ui/system/"):
+		return UI_SYSTEM
+	return null

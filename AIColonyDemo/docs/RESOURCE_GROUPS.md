@@ -35,6 +35,9 @@ var from_old_path := GameResourceGroups.texture_by_source_path(
 	GameResourceGroups.COLONIST_SHEETS,
 	"res://image/characters/colonists/generated/npc_01_engineer_4x4.png"
 )
+var by_known_prefix := GameResourceGroups.texture_from_known_group(
+	"res://image/tiles/legacy/Outside_B.png"
+)
 ```
 
 Use this when a system needs to discover a family of assets. Keep direct `preload()` for critical always-used assets where startup validation matters.
