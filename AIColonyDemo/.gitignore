@@ -1,0 +1,5 @@
+.godot/
+*.log
+shot.png
+deepseek_key.txt
+settings.cfg

@@ -1,0 +1,62 @@
+# Godot generated/import cache
+.godot/
+**/.godot/
+*.import
+*.uid
+*.tmp
+*.translation
+
+# Local secrets and machine-specific settings
+.env
+.env.*
+*.key
+*_key.txt
+settings.cfg
+deepseek_key.txt
+
+# Logs and runtime output
+*.log
+logs/
+user_data/
+crash_dump*/
+
+# AI agent local state and scratch work
+.agents/
+.ai/
+.claude/
+.codex/
+_scratch/
+order_tmp.txt
+
+# Local notes
+.obsidian/
+
+# Editor and OS noise
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Dependency folders and build output
+node_modules/
+dist/
+build/
+coverage/
+.cache/
+
+# Large local tools and archives kept outside source control
+Godot_v*/
+godot-resource-groups-*/
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+
+# Captures and generated previews
+shot.png
+*.bak
+*.base

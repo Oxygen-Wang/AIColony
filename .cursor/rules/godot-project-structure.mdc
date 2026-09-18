@@ -1,0 +1,15 @@
+---
+description: Godot folder and GDScript conventions
+globs: **/*.gd,**/*.tscn,**/*.tres,**/*.godot
+alwaysApply: false
+---
+
+# Godot Project Structure
+
+- Keep framework code separate from game code. `zfoo/` is framework-only.
+- Put runnable and instanced scenes in `scene/`; put game scripts in `script/`.
+- Store images in `image/`, audio in `audio/`, shaders in `shader/`, and extra binary assets in `assets/`.
+- Use explicit GDScript function signatures and return types.
+- Prefer `:=` for local variables when the inferred type is clear.
+- Use `_ready`, `_process`, and other underscore names for engine callbacks; do not prefix ordinary business methods with `_`.
+- Connect signals to readable handlers such as `on_buy_pressed` or `handle_close`.
