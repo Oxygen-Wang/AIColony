@@ -1,10 +1,9 @@
-[gd_resource type="Resource" script_class="ResourceGroup" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="ResourceGroup" format=3 uid="uid://c4qtdd0m2dxo8"]
 
-[ext_resource type="Script" path="res://addons/godot_resource_groups/resource_group.gd" id="1_tiles_auto"]
+[ext_resource type="Script" uid="uid://epwqnwo6e7ls" path="res://addons/godot_resource_groups/resource_group.gd" id="1_tiles_auto"]
 
 [resource]
 script = ExtResource("1_tiles_auto")
 base_folder = "res://image/tiles/autotiles"
 includes = Array[String](["*.png"])
-excludes = Array[String]([])
-paths = Array[String]([])
+paths = Array[String](["res://image/tiles/autotiles/overworld_autotiles.png"])

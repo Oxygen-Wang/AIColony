@@ -1,10 +1,9 @@
-[gd_resource type="Resource" script_class="ResourceGroup" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="ResourceGroup" format=3 uid="uid://dfd2jbf6x74us"]
 
-[ext_resource type="Script" path="res://addons/godot_resource_groups/resource_group.gd" id="1_ui_system"]
+[ext_resource type="Script" uid="uid://epwqnwo6e7ls" path="res://addons/godot_resource_groups/resource_group.gd" id="1_ui_system"]
 
 [resource]
 script = ExtResource("1_ui_system")
 base_folder = "res://image/ui/system"
 includes = Array[String](["*.png"])
-excludes = Array[String]([])
-paths = Array[String]([])
+paths = Array[String](["res://image/ui/system/Balloon.png", "res://image/ui/system/GameOver.png", "res://image/ui/system/IconSet.png", "res://image/ui/system/Shadow.png", "res://image/ui/system/Window.png"])

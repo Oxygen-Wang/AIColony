@@ -1,10 +1,9 @@
-[gd_resource type="Resource" script_class="ResourceGroup" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="ResourceGroup" format=3 uid="uid://tw8cx8ckinvp"]
 
-[ext_resource type="Script" path="res://addons/godot_resource_groups/resource_group.gd" id="1_monsters"]
+[ext_resource type="Script" uid="uid://epwqnwo6e7ls" path="res://addons/godot_resource_groups/resource_group.gd" id="1_monsters"]
 
 [resource]
 script = ExtResource("1_monsters")
 base_folder = "res://image/characters/monsters"
 includes = Array[String](["**/*.png"])
-excludes = Array[String]([])
-paths = Array[String]([])
+paths = Array[String](["res://image/characters/monsters/generated/boss_autumn_atlas.png", "res://image/characters/monsters/generated/boss_spring_atlas.png", "res://image/characters/monsters/generated/boss_summer_atlas.png", "res://image/characters/monsters/generated/boss_winter_atlas.png", "res://image/characters/monsters/generated/enemy_atlas_01_basic_4x4.png", "res://image/characters/monsters/generated/enemy_atlas_02_mid_4x4.png", "res://image/characters/monsters/generated/enemy_atlas_03_heavy_4x4.png", "res://image/characters/monsters/generated/enemy_atlas_04_seasonal_4x4.png", "res://image/characters/monsters/generated/enemy_atlas_05_endgame_4x4.png", "res://image/characters/monsters/generated/enemy_directional_01_basic_16x4.png", "res://image/characters/monsters/generated/enemy_directional_02_mid_16x4.png", "res://image/characters/monsters/generated/enemy_directional_03_heavy_16x4.png", "res://image/characters/monsters/generated/enemy_directional_04_seasonal_16x4.png", "res://image/characters/monsters/generated/enemy_directional_05_endgame_16x4.png"])

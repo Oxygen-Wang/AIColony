@@ -1,10 +1,9 @@
-[gd_resource type="Resource" script_class="ResourceGroup" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="ResourceGroup" format=3 uid="uid://cfmpu438b2an1"]
 
-[ext_resource type="Script" path="res://addons/godot_resource_groups/resource_group.gd" id="1_colonists"]
+[ext_resource type="Script" uid="uid://epwqnwo6e7ls" path="res://addons/godot_resource_groups/resource_group.gd" id="1_colonists"]
 
 [resource]
 script = ExtResource("1_colonists")
 base_folder = "res://image/characters/colonists"
 includes = Array[String](["**/*.png"])
-excludes = Array[String]([])
-paths = Array[String]([])
+paths = Array[String](["res://image/characters/colonists/generated/npc_01_engineer_4x4.png", "res://image/characters/colonists/generated/npc_02_medic_botanist_4x4.png", "res://image/characters/colonists/generated/npc_03_miner_4x4.png", "res://image/characters/colonists/generated/npc_04_security_4x4.png", "res://image/characters/colonists/generated/npc_05_scientist_4x4.png", "res://image/characters/colonists/generated/npc_06_farmer_quartermaster_4x4.png"])

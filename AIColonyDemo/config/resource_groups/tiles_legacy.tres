@@ -1,10 +1,9 @@
-[gd_resource type="Resource" script_class="ResourceGroup" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="ResourceGroup" format=3 uid="uid://qy1a4jlvhcsm"]
 
-[ext_resource type="Script" path="res://addons/godot_resource_groups/resource_group.gd" id="1_tiles_legacy"]
+[ext_resource type="Script" uid="uid://epwqnwo6e7ls" path="res://addons/godot_resource_groups/resource_group.gd" id="1_tiles_legacy"]
 
 [resource]
 script = ExtResource("1_tiles_legacy")
 base_folder = "res://image/tiles/legacy"
 includes = Array[String](["**/*.png"])
-excludes = Array[String]([])
-paths = Array[String]([])
+paths = Array[String](["res://image/tiles/legacy/extra/Dungeon_B.png", "res://image/tiles/legacy/extra/Inside_C.png", "res://image/tiles/legacy/extra/Outside_C.png", "res://image/tiles/legacy/extra/World_B.png"])

@@ -1,10 +1,9 @@
-[gd_resource type="Resource" script_class="ResourceGroup" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="ResourceGroup" format=3 uid="uid://bw343uq2f2gjh"]
 
-[ext_resource type="Script" path="res://addons/godot_resource_groups/resource_group.gd" id="1_tiles_drafts"]
+[ext_resource type="Script" uid="uid://epwqnwo6e7ls" path="res://addons/godot_resource_groups/resource_group.gd" id="1_tiles_drafts"]
 
 [resource]
 script = ExtResource("1_tiles_drafts")
 base_folder = "res://image/tiles/generated/expanded_asset_drafts"
 includes = Array[String](["*.png"])
-excludes = Array[String]([])
-paths = Array[String]([])
+paths = Array[String](["res://image/tiles/generated/expanded_asset_drafts/01_resources_wood_stone_tools.png", "res://image/tiles/generated/expanded_asset_drafts/02_iron_age_workshop.png", "res://image/tiles/generated/expanded_asset_drafts/03_furniture_survival_buildings.png", "res://image/tiles/generated/expanded_asset_drafts/04_steam_electric_tech.png", "res://image/tiles/generated/expanded_asset_drafts/05_electric_nuclear_endgame.png", "res://image/tiles/generated/expanded_asset_drafts/06_actions_status_ui.png"])

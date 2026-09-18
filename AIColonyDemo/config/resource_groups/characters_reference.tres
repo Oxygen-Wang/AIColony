@@ -1,10 +1,9 @@
-[gd_resource type="Resource" script_class="ResourceGroup" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="ResourceGroup" format=3 uid="uid://bhvm7rfhcxohd"]
 
-[ext_resource type="Script" path="res://addons/godot_resource_groups/resource_group.gd" id="1_chars_ref"]
+[ext_resource type="Script" uid="uid://epwqnwo6e7ls" path="res://addons/godot_resource_groups/resource_group.gd" id="1_chars_ref"]
 
 [resource]
 script = ExtResource("1_chars_ref")
 base_folder = "res://image/characters/reference"
 includes = Array[String](["*.png"])
-excludes = Array[String]([])
-paths = Array[String]([])
+paths = Array[String](["res://image/characters/reference/Actor1.png", "res://image/characters/reference/Actor2.png", "res://image/characters/reference/Actor3.png", "res://image/characters/reference/Actor4.png", "res://image/characters/reference/Actor5.png", "res://image/characters/reference/People1.png", "res://image/characters/reference/People2.png", "res://image/characters/reference/People3.png", "res://image/characters/reference/People4.png", "res://image/characters/reference/People5.png", "res://image/characters/reference/People6.png", "res://image/characters/reference/People7.png", "res://image/characters/reference/People8.png"])

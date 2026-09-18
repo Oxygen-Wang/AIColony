@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="ResourceGroup" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="ResourceGroup" format=3 uid="uid://cl1237dpd56og"]
 
-[ext_resource type="Script" path="res://addons/godot_resource_groups/resource_group.gd" id="1_colony_obj"]
+[ext_resource type="Script" uid="uid://epwqnwo6e7ls" path="res://addons/godot_resource_groups/resource_group.gd" id="1_colony_obj"]
 
 [resource]
 script = ExtResource("1_colony_obj")
 base_folder = "res://image/tiles/colony"
 includes = Array[String](["*.png"])
 excludes = Array[String](["autotile/**", "directional/**", "towers/**"])
-paths = Array[String]([])
+paths = Array[String](["res://image/tiles/colony/colony_assets_v1.png", "res://image/tiles/colony/colony_objects_latest.png"])

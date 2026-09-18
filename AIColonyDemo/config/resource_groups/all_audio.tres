@@ -1,10 +1,9 @@
-[gd_resource type="Resource" script_class="ResourceGroup" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="ResourceGroup" format=3 uid="uid://cr14hswypp5h5"]
 
-[ext_resource type="Script" path="res://addons/godot_resource_groups/resource_group.gd" id="1_audio"]
+[ext_resource type="Script" uid="uid://epwqnwo6e7ls" path="res://addons/godot_resource_groups/resource_group.gd" id="1_audio"]
 
 [resource]
 script = ExtResource("1_audio")
 base_folder = "res://audio"
 includes = Array[String](["**/*.ogg", "**/*.wav", "**/*.mp3"])
-excludes = Array[String]([])
-paths = Array[String]([])
+paths = Array[String](["res://audio/ambience/Darkness.ogg", "res://audio/ambience/Fire.ogg", "res://audio/ambience/Rain.ogg", "res://audio/ambience/Wind.ogg", "res://audio/bgm/Battle3.ogg", "res://audio/bgm/Field1.ogg", "res://audio/bgm/Theme1.ogg", "res://audio/jingles/lose.ogg", "res://audio/jingles/win.ogg", "res://audio/sfx/attack_melee.ogg", "res://audio/sfx/attack_unarmed.ogg", "res://audio/sfx/beast_die.ogg", "res://audio/sfx/beast_howl.ogg", "res://audio/sfx/beast_hurt.ogg", "res://audio/sfx/build_bed.ogg", "res://audio/sfx/build_campfire.ogg", "res://audio/sfx/build_door.ogg", "res://audio/sfx/build_farm.ogg", "res://audio/sfx/build_table.ogg", "res://audio/sfx/build_torch.ogg", "res://audio/sfx/build_turret.ogg", "res://audio/sfx/build_wall.ogg", "res://audio/sfx/chop_tree.ogg", "res://audio/sfx/cook_meal.ogg", "res://audio/sfx/craft_armor.ogg", "res://audio/sfx/craft_weapon.ogg", "res://audio/sfx/dawn.ogg", "res://audio/sfx/day_start.ogg", "res://audio/sfx/dig_cave.ogg", "res://audio/sfx/eat.ogg", "res://audio/sfx/explosion.ogg", "res://audio/sfx/forage.ogg", "res://audio/sfx/harvest_crop.ogg", "res://audio/sfx/mine_iron.ogg", "res://audio/sfx/mine_stone.ogg", "res://audio/sfx/nightfall.ogg", "res://audio/sfx/notify.ogg", "res://audio/sfx/order_fail.ogg", "res://audio/sfx/order_ok.ogg", "res://audio/sfx/pawn_die.ogg", "res://audio/sfx/pawn_hurt.ogg", "res://audio/sfx/plant_crop.ogg", "res://audio/sfx/repair.ogg", "res://audio/sfx/rest.ogg", "res://audio/sfx/sleep.ogg", "res://audio/sfx/task_done.ogg", "res://audio/sfx/treat_wound.ogg", "res://audio/sfx/turret_shot.ogg", "res://audio/sfx/ui_click.ogg", "res://audio/sfx/wall_break.ogg", "res://audio/sfx/wave_start.ogg"])

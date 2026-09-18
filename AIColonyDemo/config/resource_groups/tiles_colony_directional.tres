@@ -1,10 +1,9 @@
-[gd_resource type="Resource" script_class="ResourceGroup" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="ResourceGroup" format=3 uid="uid://b3pc0ju264e3"]
 
-[ext_resource type="Script" path="res://addons/godot_resource_groups/resource_group.gd" id="1_colony_dir"]
+[ext_resource type="Script" uid="uid://epwqnwo6e7ls" path="res://addons/godot_resource_groups/resource_group.gd" id="1_colony_dir"]
 
 [resource]
 script = ExtResource("1_colony_dir")
 base_folder = "res://image/tiles/colony/directional"
 includes = Array[String](["*.png"])
-excludes = Array[String]([])
-paths = Array[String]([])
+paths = Array[String](["res://image/tiles/colony/directional/door_electric_4dir.png", "res://image/tiles/colony/directional/door_iron_4dir.png", "res://image/tiles/colony/directional/door_radiation_4dir.png", "res://image/tiles/colony/directional/door_stone_4dir.png", "res://image/tiles/colony/directional/door_wood_4dir.png", "res://image/tiles/colony/directional/wall_stone_4dir.png", "res://image/tiles/colony/directional/wall_upgraded_4dir.png"])

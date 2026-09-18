@@ -1,10 +1,9 @@
-[gd_resource type="Resource" script_class="ResourceGroup" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="ResourceGroup" format=3 uid="uid://bp88rdw8irsk6"]
 
-[ext_resource type="Script" path="res://addons/godot_resource_groups/resource_group.gd" id="1_tiles_rpg"]
+[ext_resource type="Script" uid="uid://epwqnwo6e7ls" path="res://addons/godot_resource_groups/resource_group.gd" id="1_tiles_rpg"]
 
 [resource]
 script = ExtResource("1_tiles_rpg")
 base_folder = "res://image/tiles/rpgmaker"
 includes = Array[String](["*.png"])
-excludes = Array[String]([])
-paths = Array[String]([])
+paths = Array[String](["res://image/tiles/rpgmaker/Inside_A2.png", "res://image/tiles/rpgmaker/Inside_B.png", "res://image/tiles/rpgmaker/Outside_A2.png", "res://image/tiles/rpgmaker/Outside_B.png"])
