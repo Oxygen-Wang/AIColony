@@ -10,8 +10,19 @@
 .env
 .env.*
 !.env.example
+secrets.*
+secret.*
+token.*
+tokens.*
 *.key
 *_key.txt
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+id_rsa
+id_ed25519
 settings.cfg
 deepseek_key.txt
 
