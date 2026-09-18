@@ -12,6 +12,8 @@ const GENERATED_ENEMY_SHEETS := [
 ]
 const SPRITE_SIZE := Vector2(32, 32)
 
+static var generated_enemy_sheets: Array[Texture2D] = []
+
 var game: Node
 var world: GameWorld
 
@@ -253,9 +255,10 @@ func _draw() -> void:
 
 
 func draw_generated_enemy(bob: float) -> void:
-	var sheet_index := clampi(enemy_kind / 4, 0, GENERATED_ENEMY_SHEETS.size() - 1)
+	var sheets := get_generated_enemy_sheets()
+	var sheet_index := clampi(enemy_kind / 4, 0, sheets.size() - 1)
 	var local_index := posmod(enemy_kind, 4)
-	var texture: Texture2D = GENERATED_ENEMY_SHEETS[sheet_index]
+	var texture: Texture2D = sheets[sheet_index]
 	var cell_size := Vector2(texture.get_width() / 16.0, texture.get_height() / 4.0)
 	var action_col := 0
 	if attack_flash > 0.0:
@@ -268,3 +271,15 @@ func draw_generated_enemy(bob: float) -> void:
 	draw_texture_rect_region(texture, Rect2(-draw_size.x * 0.5, -draw_size.y * 0.62 + bob, draw_size.x, draw_size.y), source)
 	pass
 
+
+static func get_generated_enemy_sheets() -> Array[Texture2D]:
+	if not generated_enemy_sheets.is_empty():
+		return generated_enemy_sheets
+	generated_enemy_sheets = GameResourceGroups.textures_matching(
+		GameResourceGroups.MONSTER_SHEETS,
+		["generated/enemy_directional_*.png"]
+	)
+	if generated_enemy_sheets.is_empty():
+		for texture: Texture2D in GENERATED_ENEMY_SHEETS:
+			generated_enemy_sheets.append(texture)
+	return generated_enemy_sheets

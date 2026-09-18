@@ -35,6 +35,13 @@ var engineer := GameResourceGroups.texture_by_name(
 
 Use this when a system needs to discover a family of assets. Keep direct `preload()` for critical always-used assets where startup validation matters.
 
+For existing gameplay scripts, migrate gradually:
+
+1. Add a narrow resource group for one asset family.
+2. Read from `GameResourceGroups` first.
+3. Keep the old explicit `preload()` list as a fallback until the group is proven stable.
+4. Remove the fallback only after the group is rebuilt in Godot and covered by a smoke test.
+
 ## Grouping Rule
 
 Split groups by gameplay purpose first, folder second. Avoid broad catch-all groups such as `all_images.tres` unless a tool truly needs to scan every image.

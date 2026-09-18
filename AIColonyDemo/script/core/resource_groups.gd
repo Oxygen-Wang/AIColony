@@ -38,6 +38,12 @@ static func textures(group: ResourceGroup) -> Array[Texture2D]:
 	return result
 
 
+static func textures_matching(group: ResourceGroup, includes: Array[String], excludes: Array[String] = []) -> Array[Texture2D]:
+	var result: Array[Texture2D] = []
+	group.load_matching_into(result, includes, excludes)
+	return result
+
+
 static func first_path_containing(group: ResourceGroup, text: String) -> String:
 	for path: String in group.paths:
 		if path.contains(text):
