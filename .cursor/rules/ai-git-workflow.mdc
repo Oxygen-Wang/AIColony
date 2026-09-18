@@ -9,6 +9,7 @@ alwaysApply: true
 - Before editing, inspect the relevant existing files and keep changes tightly scoped.
 - Do not modify `zfoo/` framework code or copied framework folders unless the task explicitly requires framework work.
 - Do not commit secrets, local settings, caches, generated imports, large tool folders, or temporary scratch files.
+- Keep real API keys only in local ignored files such as `.env`; commit `.env.example` with empty placeholder names only.
 - Use Git for checkpoints: review the diff before each commit and write clear Conventional Commit messages.
 - Prefer Git LFS for binary game assets such as images, audio, video, fonts, and 3D models.
 - When adding external Godot plugins, place them under the target Godot project's `addons/` folder and document the source repository and version.

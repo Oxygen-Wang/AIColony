@@ -9,6 +9,7 @@
 # Local secrets and machine-specific settings
 .env
 .env.*
+!.env.example
 *.key
 *_key.txt
 settings.cfg
